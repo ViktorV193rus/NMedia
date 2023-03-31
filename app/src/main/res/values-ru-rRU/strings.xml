@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">НМедиа!</string>
+    <string name="description_post_author_avatar">Аватар автора поста</string>
+    <string name="description_post_menu">Меню поста</string>
+    <string name="description_post_likes">Лайки</string>
+    <string name="description_views">Просмотров</string>
+    <string name="description_shared">Поделились</string>
+</resources>
