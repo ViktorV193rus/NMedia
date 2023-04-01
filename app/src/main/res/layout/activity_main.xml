@@ -11,8 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="avatarView,publishedView,menuView"
-        tools:layout_editor_absoluteY="48dp" />
+        app:constraint_referenced_ids="avatarView,publishedView,menuView" />
 
     <ImageView
         android:id="@+id/avatarView"
@@ -67,8 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="contentView"
-        tools:layout_editor_absoluteY="217dp" />
+        app:constraint_referenced_ids="contentView" />
 
     <TextView
         android:id="@+id/contentView"
@@ -89,33 +87,36 @@
         android:id="@+id/viewsView"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:contentDescription="@string/description_views"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/description_views"
+        app:layout_constraintEnd_toStartOf="@+id/viewsTextView"
         app:layout_constraintTop_toBottomOf="@+id/contentView"
         app:srcCompat="@drawable/baseline_remove_red_eye_24"
-        tools:ignore="ImageContrastCheck"
-        tools:layout_editor_absoluteX="293dp" />
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/viewsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:paddingEnd="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewsView"
-        app:layout_constraintStart_toEndOf="@+id/viewsView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewsView"
-        tools:text="@sample/posts.json/data/views" />
+        tools:text="@sample/posts.json/data/views"
+        tools:ignore="RtlSymmetry" />
 
     <ImageView
         android:id="@+id/willShareView"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:contentDescription="@string/description_shared"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/description_shared"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toEndOf="@+id/likesViewText"
         app:layout_constraintTop_toBottomOf="@+id/contentView"
         app:srcCompat="@android:drawable/ic_menu_share"
-        tools:ignore="ImageContrastCheck"
-        tools:layout_editor_absoluteX="136dp" />
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/shareVievText"
@@ -129,14 +130,15 @@
 
     <ImageView
         android:id="@+id/likesView"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:contentDescription="@string/description_post_likes"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/description_post_likes"
+        android:paddingStart="8dp"
+        android:paddingBottom="@dimen/common_spacing"
         app:layout_constraintTop_toBottomOf="@+id/contentView"
-        app:layout_constraintVertical_bias="0.305"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:ignore="ImageContrastCheck" />
+        app:srcCompat="@drawable/ic_launcher_like_foreground"
+        tools:ignore="ImageContrastCheck,RtlSymmetry" />
 
     <TextView
         android:id="@+id/likesViewText"
@@ -147,8 +149,5 @@
         app:layout_constraintStart_toEndOf="@+id/likesView"
         app:layout_constraintTop_toTopOf="@+id/likesView"
         tools:text="@sample/posts.json/data/likes" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
