@@ -18,6 +18,8 @@
         android:layout_width="@dimen/posts_avatar_size"
         android:layout_height="@dimen/posts_avatar_size"
         android:contentDescription="@string/description_post_author_avatar"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@sample/posts.json/data/authorAvatar" />
@@ -52,11 +54,17 @@
 
     <ImageButton
         android:id="@+id/menuView"
-        android:layout_width="wrap_content"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/common_spacing"
         android:background="@android:color/transparent"
         android:contentDescription="@string/description_post_menu"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+
+        android:paddingStart="35dp"
+        android:paddingEnd="5dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_more_vert_24" />
@@ -73,6 +81,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:lines="9"
         android:ellipsize="end"
         android:autoLink="web"
@@ -100,6 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingEnd="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewsView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewsView"
@@ -119,7 +130,7 @@
         tools:ignore="ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/shareVievText"
+        android:id="@+id/shareViewText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -132,9 +143,10 @@
         android:id="@+id/likesView"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="3dp"
         android:contentDescription="@string/description_post_likes"
-        android:paddingStart="8dp"
+        android:layout_marginStart="8dp"
+        android:padding="1dp"
         android:paddingBottom="@dimen/common_spacing"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contentView"
